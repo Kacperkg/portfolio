@@ -1,37 +1,63 @@
 import Link from "next/link";
+import { MapPin as FeatherIcon } from "react-feather";
+import Footer from "~/components/footer";
+import Nav from "~/components/nav";
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-          Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-        </h1>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/usage/first-steps"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">First Steps →</h3>
-            <div className="text-lg">
-              Just the basics - Everything you need to know to set up your
-              database and authentication.
-            </div>
-          </Link>
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/introduction"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">Documentation →</h3>
-            <div className="text-lg">
-              Learn more about Create T3 App, the libraries it uses, and how to
-              deploy it.
-            </div>
-          </Link>
+    <main className="bg-black text-white">
+      <Nav />
+      <div className="flex min-h-[90vh] flex-col items-center justify-center">
+        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
+          <h1 className="text-center text-8xl font-light tracking-tight text-white sm:text-[7rem] lg:text-[10rem]">
+            KACPER <br /> GAJDARSKI
+          </h1>
+          <div className="flex flex-col gap-2">
+            <p className="text-left text-2xl text-white/50">
+              Looking for opportunities as a Frontend or Mobile Developer.
+            </p>
+            <p className="text-left text-2xl text-white/50">
+              Computing Science Graduate @{" "}
+              <Link
+                target="_blank"
+                href="https://www.hw.ac.uk/"
+                className="relative after:absolute after:right-0 after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:origin-right after:bg-gray-400 after:transition-[width] after:duration-300 after:ease-in-out hover:after:w-full"
+              >
+                Heriot-Watt University
+              </Link>
+            </p>
+            <p className="flex items-center gap-2 text-left text-2xl text-white/50">
+              Based in Edinburgh, Scotland. UK.
+              <FeatherIcon
+                name="map-pin"
+                className="inline-block text-[#DC143C]"
+              />
+            </p>
+          </div>
+          <div className="flex flex-row gap-4">
+            <Link
+              href="/projects"
+              className="rounded-md bg-white px-4 py-2 text-2xl text-[#171717] transition-all duration-100 hover:scale-105"
+            >
+              Projects
+            </Link>
+            <a
+              href="/cv.pdf"
+              download="cv.pdf"
+              className="cursor-pointer rounded-md bg-white px-4 py-2 text-2xl text-[#171717] transition-all duration-100 hover:scale-105"
+            >
+              CV
+            </a>
+            <Link
+              href="/about"
+              className="rounded-md bg-white px-4 py-2 text-2xl text-[#171717] transition-all duration-100 hover:scale-105"
+            >
+              About
+            </Link>
+          </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }
