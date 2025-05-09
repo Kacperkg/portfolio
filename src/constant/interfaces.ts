@@ -17,4 +17,16 @@ interface Project {
   githubUrl?: string;
 }
 
-export type { ProjectCardProps, Project };
+interface ExperienceItem {
+  period: string;
+  company: string;
+  location: string;
+  role: string;
+}
+
+interface SkillCategory {
+  title: string;
+  skills: string[];
+}
+
+export type { ProjectCardProps, Project, ExperienceItem, SkillCategory };

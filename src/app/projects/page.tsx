@@ -1,7 +1,7 @@
 import Footer from "~/components/footer";
 import Nav from "~/components/nav";
 import ProjectGrid from "~/components/project-grid";
-import { projectsData } from "~/constant/projects";
+import { projectsData } from "~/constant/data/projects";
 import EmptySpace from "~/components/empty-space";
 
 export default function ProjectsPage() {

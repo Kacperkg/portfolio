@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "./project-card";
-import { projectsData } from "~/constant/projects";
+import { projectsData } from "~/constant/data/projects";
 
 const ProjectGrid = () => {
   return (
