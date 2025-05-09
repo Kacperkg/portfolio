@@ -162,7 +162,7 @@ const Contact = () => {
 
           <div className="md:col-span-2">
             <h3 className="mb-8 text-2xl font-medium md:text-3xl">
-              Let's connect.
+              Let&apos;s connect.
             </h3>
 
             <div className="mb-12">
