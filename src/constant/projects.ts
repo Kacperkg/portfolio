@@ -1,18 +1,31 @@
-const projects = [
+import type { Project } from "~/constant/interfaces";
+
+export const projectsData: Project[] = [
   {
-    title: "Project 1",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique dolor fuga ex non. Deserunt labore dolore architecto rem corrupti omnis.",
-    technologies: ["React Native", "Typescript", "Clerk", "Convex"],
-    year: 2025,
+    id: 1,
+    title: "Portfolio Redesign",
+    description: "A minimal, dark-themed personal portfolio.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Next.js",
+      "Framer Motion",
+    ],
+    demoUrl: "https://kacpergajdarski.com",
+    githubUrl: "https://github.com/kacpergajdarski/portfolio",
   },
   {
-    title: "Project 2",
+    id: 2,
+    title: "Hive - Workout Planner App",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique dolor fuga ex non. Deserunt labore dolore architecto rem corrupti omnis.",
-    technologies: ["React Native", "Typescript", "Clerk", "Convex"],
-    year: 2025,
+      "A modern, interactive workout planner for fitness enthusiasts.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    technologies: ["React Native", "TypeScript", "Expo", "Convex", "Clerk"],
+    demoUrl: "#",
+    githubUrl: "#",
   },
 ];
-
-export default projects;

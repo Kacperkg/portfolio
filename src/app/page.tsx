@@ -7,16 +7,16 @@ export default function HomePage() {
   return (
     <main className="bg-black text-white">
       <Nav />
-      <div className="flex min-h-[90vh] flex-col items-center justify-center">
+      <div className="flex min-h-screen flex-col items-center justify-center">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
           <h1 className="text-center text-8xl font-light tracking-tight text-white sm:text-[7rem] lg:text-[10rem]">
             KACPER <br /> GAJDARSKI
           </h1>
-          <div className="flex flex-col gap-2">
-            <p className="text-left text-2xl text-white/50">
-              Looking for opportunities as a Frontend or Mobile Developer.
+          <div className="flex flex-col items-center gap-2">
+            <p className="text-2xl text-white/50">
+              Frontend Developer | Mobile Developer.
             </p>
-            <p className="text-left text-2xl text-white/50">
+            <p className="text-2xl text-white/50">
               Computing Science Graduate @{" "}
               <Link
                 target="_blank"
@@ -26,7 +26,7 @@ export default function HomePage() {
                 Heriot-Watt University
               </Link>
             </p>
-            <p className="flex items-center gap-2 text-left text-2xl text-white/50">
+            <p className="flex items-center gap-2 text-2xl text-white/50">
               Based in Edinburgh, Scotland. UK.
               <FeatherIcon
                 name="map-pin"

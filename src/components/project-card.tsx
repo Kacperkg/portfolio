@@ -1,28 +1,58 @@
 import Link from "next/link";
-import type { Project } from "~/constant/type";
+import type { ProjectCardProps } from "~/constant/interfaces";
 
-const ProjectCard = ({ project }: { project: Project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  title,
+  description,
+  imageUrl,
+  technologies,
+  demoUrl,
+  githubUrl,
+}) => {
   return (
-    <div className="mb-8 flex flex-col gap-4">
-      <div className="group relative flex aspect-[16/7] w-full max-w-7xl flex-col gap-4 overflow-hidden">
+    <div className="group rounded-sm bg-[#111111] transition-all duration-300 hover:scale-101">
+      <div className="overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4"
-          alt="Project 1"
-          className="h-full w-full rounded-2xl object-cover"
+          src={imageUrl}
+          alt={title}
+          className="project-image transition-all duration-300 group-hover:scale-105"
         />
-        <div className="absolute right-0 bottom-[-100%] flex h-1/2 w-full flex-col justify-center bg-black/80 p-6 transition-all duration-200 ease-in-out group-hover:bottom-0">
-          <p className="text-white/70">{project.description}</p>
-          <div className="mt-4">
-            <h4 className="text-white/70">Technologies</h4>
-            <p className="text-white/70">{project.technologies.join(", ")}</p>
-          </div>
-        </div>
       </div>
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-light">{project.year}</h1>
-        <Link href={`/projects/${project.title}`}>
-          <h1 className="text-2xl font-light">{project.title}</h1>
-        </Link>
+      <div className="p-6">
+        <h3 className="mb-2 text-2xl font-bold">{title}</h3>
+        <p className="mb-4 text-white/70">{description}</p>
+        <div className="mb-6 flex flex-wrap gap-2">
+          {technologies.map((tech) => (
+            <span
+              key={tech}
+              className="rounded-full bg-white/10 px-3 py-1 text-sm text-white/80"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+        <div className="flex flex-wrap gap-3">
+          {demoUrl && (
+            <Link
+              href={demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-sm bg-white px-3 py-1 text-sm text-black transition-all duration-300 hover:scale-105"
+            >
+              {demoUrl ? "Live Demo" : "Learn More"}
+            </Link>
+          )}
+          {githubUrl && (
+            <Link
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-sm bg-white/10 px-3 py-1 text-sm text-white/80 transition-all duration-300 hover:bg-white/20"
+            >
+              View Code
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );
