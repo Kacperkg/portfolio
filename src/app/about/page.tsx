@@ -63,7 +63,7 @@ const AboutContent = () => {
               I graduated from Heriot-Watt University with a 2:1 in Computing
               Science (Software Engineering). I love building front-end
               interfaces and mobile apps because I get to see my changes in real
-              time and directly improve the user's experience and journey.
+              time and directly improve the user&apos;s experience and journey.
             </p>
             <p className="text-secondary mb-6 text-lg leading-relaxed">
               I enjoy creating digital products that are not only visually
@@ -71,7 +71,7 @@ const AboutContent = () => {
               on making things intuitive and enjoyable to use.
             </p>
             <p className="text-secondary text-lg leading-relaxed">
-              For me, it's all about combining great design with smooth
+              For me, it&apos;s all about combining great design with smooth
               functionality, so every project I work on feels seamless and
               user-friendly from start to finish.
             </p>
