@@ -1,6 +1,5 @@
 import { Mail } from "lucide-react";
 import { Github } from "lucide-react";
-import { Twitter } from "lucide-react";
 import { Linkedin } from "lucide-react";
 import Footer from "~/components/footer";
 import Nav from "~/components/nav";

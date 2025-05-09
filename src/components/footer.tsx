@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Github, Mail, Linkedin, Twitter } from "lucide-react";
+import { Github, Mail, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
