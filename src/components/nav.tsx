@@ -22,12 +22,6 @@ const Navbar = () => {
         >
           About
         </Link>
-        <Link
-          href="/contact"
-          className="relative text-xl font-light after:absolute after:right-0 after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:origin-right after:bg-white after:transition-[width] after:duration-300 after:ease-in-out hover:after:w-full"
-        >
-          Contact
-        </Link>
       </div>
     </nav>
   );
