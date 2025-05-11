@@ -15,7 +15,7 @@ const Footer = () => {
 
           <div className="flex items-center space-x-6">
             <a
-              href="https://github.com"
+              href="https://github.com/kacperkg"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/70 transition-colors hover:text-white"
@@ -29,7 +29,7 @@ const Footer = () => {
               <Mail size={20} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/kacper-gajdarski-9b9b55233/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/70 transition-colors hover:text-white"

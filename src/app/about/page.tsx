@@ -184,20 +184,23 @@ const Contact = () => {
               <p className="text-secondary mb-6 text-lg">Find me on:</p>
               <div className="flex space-x-5">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/kacper-gajdarski-9b9b55233/"
+                  target="_blank"
                   className="text-white/70 transition-colors hover:text-white"
                 >
                   <Linkedin className="h-6 w-6" />
                 </a>
 
                 <a
-                  href="#"
+                  href="https://github.com/kacperkg"
+                  target="_blank"
                   className="text-white/70 transition-colors hover:text-white"
                 >
                   <Github className="h-6 w-6" />
                 </a>
                 <a
-                  href="#"
+                  href="mailto:gajdarski.kacper@gmail.com"
+                  target="_blank"
                   className="text-white/70 transition-colors hover:text-white"
                 >
                   <Mail className="h-6 w-6" />

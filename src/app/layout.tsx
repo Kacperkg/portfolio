@@ -5,8 +5,8 @@ import { Space_Grotesk } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Kacper Gajdarski",
-  description: "Kacper Gajdarski's Portfolio",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  description: "Projects",
+  icons: [{ rel: "icon", url: "/favicon.svg" }],
 };
 
 const spaceGrotesk = Space_Grotesk({
