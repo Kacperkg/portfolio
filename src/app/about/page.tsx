@@ -1,6 +1,7 @@
-import { Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { Github } from "lucide-react";
 import { Linkedin } from "lucide-react";
+import Link from "next/link";
 import Footer from "~/components/footer";
 import Nav from "~/components/nav";
 import experiences from "~/constant/data/experience";
@@ -8,7 +9,7 @@ import skillCategories from "~/constant/data/skills";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen px-4 md:px-0">
       <Nav />
 
       <AboutLanding />
@@ -25,7 +26,7 @@ const AboutLanding = () => {
   return (
     <section className="flex min-h-screen flex-col justify-center pt-24 pb-16">
       <div className="animate-fade-in mx-auto max-w-4xl">
-        <div className="mb-8">
+        <div className="mb-8 text-left">
           <h2 className="text-secondary mb-3 text-lg tracking-widest uppercase">
             About Me
           </h2>
@@ -40,9 +41,13 @@ const AboutLanding = () => {
           and eager to apply my skills in real-world projects.
         </p>
 
-        <button className="rounded-sm border border-white/20 px-6 py-2 text-sm transition-all hover:bg-white/5">
-          Contact.
-        </button>
+        <Link
+          href="mailto:gajdarski.kacper@gmail.com"
+          className="group flex w-fit items-center rounded-sm bg-white px-4 px-8 py-2 text-black"
+        >
+          Get in touch
+          <ArrowRight className="ml-2 h-4 w-4 transition-all duration-300 group-hover:translate-x-1" />
+        </Link>
       </div>
     </section>
   );

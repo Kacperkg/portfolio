@@ -7,13 +7,7 @@ const skillCategories: SkillCategory[] = [
   },
   {
     title: "Mobile Development",
-    skills: [
-      "React Native",
-      "Expo",
-      "TypeScript",
-      "iOS Simulator",
-      "Mobile UI/UX",
-    ],
+    skills: ["React Native", "Expo", "TypeScript", "iOS Simulator"],
   },
   {
     title: "Tools and Workflow",

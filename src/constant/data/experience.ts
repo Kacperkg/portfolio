@@ -3,7 +3,7 @@ import type { ExperienceItem } from "../interfaces";
 const experiences: ExperienceItem[] = [
   {
     period: "2024-Pressent",
-    company: "Samsung - PRS&A",
+    company: "Samsung - PRS&",
     location: "Edinburgh",
     role: "Customer Experience Expert",
   },
