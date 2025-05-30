@@ -28,6 +28,7 @@ export default async function ProjectDetail({ params }: Props) {
       <div className="relative h-[70vh] overflow-hidden">
         <div className="absolute inset-0">
           <Image
+            fill
             src={project.imageUrl}
             alt={project.title}
             className="h-full w-full object-cover"

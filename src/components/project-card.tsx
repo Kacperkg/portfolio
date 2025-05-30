@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ProjectCardProps } from "~/constant/interfaces";
+import Image from "next/image";
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   id,
@@ -13,10 +14,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div className="group rounded-sm bg-[#111111] transition-all duration-300 hover:scale-101">
       <div className="overflow-hidden">
-        <img
+        <Image
           src={imageUrl}
           alt={title}
           className="project-image aspect-video w-full object-cover transition-all duration-300 group-hover:scale-105"
+          width={200}
+          height={200}
         />
       </div>
       <div className="p-6">
