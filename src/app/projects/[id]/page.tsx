@@ -1,9 +1,10 @@
 import Link from "next/link";
 import BackButton from "~/components/back-button";
 import { projectsData } from "~/constant/data/projects";
+import Image from "next/image";
 
 interface Props {
-  params: Promise<{ id: string }>; // Changed this line
+  params: Promise<{ id: string }>;
 }
 
 // Made the component async
@@ -24,10 +25,9 @@ export default async function ProjectDetail({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Hero Section with Fixed Background */}
       <div className="relative h-[70vh] overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <Image
             src={project.imageUrl}
             alt={project.title}
             className="h-full w-full object-cover"
