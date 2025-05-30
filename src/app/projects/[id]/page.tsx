@@ -3,11 +3,14 @@ import BackButton from "~/components/back-button";
 import { projectsData } from "~/constant/data/projects";
 
 interface Props {
-  params: { id: string };
+  params: Promise<{ id: string }>; // Changed this line
 }
 
-export default function ProjectDetail({ params }: Props) {
-  const projectId = Number(params.id);
+// Made the component async
+export default async function ProjectDetail({ params }: Props) {
+  // Await the params
+  const { id } = await params;
+  const projectId = Number(id);
   const project = projectsData.find((p) => p.id === projectId);
 
   if (!project) {
@@ -46,7 +49,9 @@ export default function ProjectDetail({ params }: Props) {
 
         {/* Navigation */}
         <div
-          className={`absolute top-0 left-0 z-10 w-full p-6 ${project.construction ? "mt-16" : ""}`}
+          className={`absolute top-0 left-0 z-10 w-full p-6 ${
+            project.construction ? "mt-16" : ""
+          }`}
         >
           <BackButton>Back to projects</BackButton>
         </div>
