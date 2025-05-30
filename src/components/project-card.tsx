@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ProjectCardProps } from "~/constant/interfaces";
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
+  id,
   title,
   description,
   imageUrl,
@@ -15,7 +16,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <img
           src={imageUrl}
           alt={title}
-          className="project-image transition-all duration-300 group-hover:scale-105"
+          className="project-image aspect-video w-full object-cover transition-all duration-300 group-hover:scale-105"
         />
       </div>
       <div className="p-6">
@@ -32,16 +33,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           ))}
         </div>
         <div className="flex flex-wrap gap-3">
-          {demoUrl && (
-            <Link
-              href={demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-sm bg-white px-3 py-1 text-sm text-black transition-all duration-300 hover:scale-105"
-            >
-              {demoUrl ? "Live Demo" : "Learn More"}
-            </Link>
-          )}
+          <Link
+            href={`/projects/${id}`}
+            className="rounded-sm bg-white px-3 py-1 text-sm text-black transition-all duration-300 hover:scale-105"
+          >
+            Learn More
+          </Link>
           {githubUrl && (
             <Link
               href={githubUrl}

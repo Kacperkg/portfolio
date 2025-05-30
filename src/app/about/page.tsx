@@ -9,7 +9,7 @@ import skillCategories from "~/constant/data/skills";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen px-4 md:px-0">
+    <main className="min-h-screen px-4 lg:px-0">
       <Nav />
 
       <AboutLanding />
@@ -70,12 +70,12 @@ const AboutContent = () => {
               interfaces and mobile apps because I get to see my changes in real
               time and directly improve the user&apos;s experience and journey.
             </p>
-            <p className="text-secondary mb-6 text-lg leading-relaxed">
+            <p className="text-secondary mb-6 text-xl leading-relaxed">
               I enjoy creating digital products that are not only visually
               appealing but also genuinely helpful to users. My focus is always
               on making things intuitive and enjoyable to use.
             </p>
-            <p className="text-secondary text-lg leading-relaxed">
+            <p className="text-secondary text-xl leading-relaxed">
               For me, it&apos;s all about combining great design with smooth
               functionality, so every project I work on feels seamless and
               user-friendly from start to finish.
@@ -128,26 +128,18 @@ const Skills = () => {
     <section className="border-t border-white/10 py-24">
       <div className="mx-auto max-w-4xl">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
-          <div className="col-span-1">
-            <h2 className="text-secondary mb-3 text-lg tracking-widest uppercase">
-              Skills
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:col-span-2 lg:grid-cols-3">
-            {skillCategories.map((category, index) => (
-              <div key={index} className="mb-6">
-                <h3 className="mb-4 text-xl font-medium">{category.title}</h3>
-                <ul className="space-y-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <li key={skillIndex} className="text-secondary">
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          {skillCategories.map((category, index) => (
+            <div key={index} className="mb-6">
+              <h3 className="mb-4 text-xl font-medium">{category.title}</h3>
+              <ul className="space-y-2">
+                {category.skills.map((skill, skillIndex) => (
+                  <li key={skillIndex} className="text-secondary">
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>

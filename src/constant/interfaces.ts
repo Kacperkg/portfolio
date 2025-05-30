@@ -1,4 +1,5 @@
 interface ProjectCardProps {
+  id: number;
   title: string;
   description: string;
   imageUrl: string;
@@ -15,6 +16,7 @@ interface Project {
   technologies: string[];
   demoUrl?: string;
   githubUrl?: string;
+  construction?: boolean;
 }
 
 interface ExperienceItem {
