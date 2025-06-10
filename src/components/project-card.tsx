@@ -18,8 +18,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           src={imageUrl}
           alt={title}
           className="project-image aspect-video w-full object-cover transition-all duration-300 group-hover:scale-105"
-          width={200}
-          height={200}
+          width={1920}
+          height={1080}
         />
       </div>
       <div className="p-6">
