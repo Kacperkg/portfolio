@@ -3,11 +3,18 @@ import type { SkillCategory } from "~/constant/interfaces";
 const skillCategories: SkillCategory[] = [
   {
     title: "Front-End Development",
-    skills: ["React", "TypeScript", "HTML/CSS", "Tailwind CSS"],
+    skills: [
+      "React",
+      "TypeScript",
+      "HTML/CSS",
+      "Tailwind CSS",
+      "Shadcn/UI",
+      "Next.js",
+    ],
   },
   {
-    title: "Mobile Development",
-    skills: ["React Native", "Expo", "TypeScript", "iOS Simulator"],
+    title: "Back-End",
+    skills: ["tRPC", "Prisma", "Supabase", "Clerk"],
   },
   {
     title: "Tools and Workflow",

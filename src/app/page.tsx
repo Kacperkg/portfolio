@@ -14,7 +14,7 @@ export default function HomePage() {
           </h1>
           <div className="flex flex-col items-center gap-2 text-center">
             <p className="text-xl text-white/50 md:text-2xl">
-              Frontend Developer | Mobile Developer.
+              Frontend Developer.
             </p>
             <p className="text-xl text-white/50 md:text-2xl">
               Computing Science Graduate @{" "}

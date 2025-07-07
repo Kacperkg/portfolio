@@ -36,9 +36,9 @@ const AboutLanding = () => {
         </div>
 
         <p className="text-secondary mb-8 max-w-3xl text-xl leading-relaxed md:text-2xl">
-          Frontend and mobile developer based in Edinburgh, focusing on creating
-          responsive web applications and mobile experiences. Recently graduated
-          and eager to apply my skills in real-world projects.
+          Frontend developer based in Edinburgh, focusing on creating responsive
+          web applications. Recently graduated and eager to apply my skills in
+          real-world projects.
         </p>
 
         <Link
@@ -67,8 +67,8 @@ const AboutContent = () => {
             <p className="mb-6 text-xl leading-relaxed">
               I graduated from Heriot-Watt University with a 2:1 in Computing
               Science (Software Engineering). I love building front-end
-              interfaces and mobile apps because I get to see my changes in real
-              time and directly improve the user&apos;s experience and journey.
+              interfaces because I get to see my changes in real time and
+              directly improve the user&apos;s experience and journey.
             </p>
             <p className="text-secondary mb-6 text-xl leading-relaxed">
               I enjoy creating digital products that are not only visually
