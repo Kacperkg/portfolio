@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { MapPin as FeatherIcon } from "react-feather";
 import Footer from "~/components/footer";
 import Nav from "~/components/nav";
+import { motion } from "framer-motion";
 
 export default function HomePage() {
   return (
@@ -9,10 +12,20 @@ export default function HomePage() {
       <Nav />
       <div className="flex min-h-screen flex-col items-center justify-center">
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-          <h1 className="text-center text-7xl font-light tracking-tight text-white sm:text-[7rem] lg:text-[10rem]">
+          <motion.h1
+            className="text-center text-7xl font-light tracking-tight text-white sm:text-[7rem] lg:text-[10rem]"
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             KACPER <br /> GAJDARSKI
-          </h1>
-          <div className="flex flex-col items-center gap-2 text-center">
+          </motion.h1>
+          <motion.div
+            className="flex flex-col items-center gap-2 text-center"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <p className="text-xl text-white/50 md:text-2xl">
               Frontend Developer.
             </p>
@@ -33,8 +46,13 @@ export default function HomePage() {
               />
               Based in Edinburgh, Scotland. UK.
             </p>
-          </div>
-          <div className="flex flex-col gap-4 text-center md:flex-row">
+          </motion.div>
+          <motion.div
+            className="flex flex-col gap-4 text-center md:flex-row"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
             <Link
               href="/projects"
               className="rounded-md bg-white px-6 py-4 text-xl text-[#171717] transition-all duration-100 hover:scale-105 md:px-4 md:py-2 md:text-2xl"
@@ -54,7 +72,7 @@ export default function HomePage() {
             >
               About
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
       <Footer />
