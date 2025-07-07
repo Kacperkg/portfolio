@@ -17,7 +17,7 @@ export const projectsData: Project[] = [
       "Vercel",
     ],
     demoUrl: "https://kacpergajdarski.com",
-    githubUrl: "https://github.com/kacpergajdarski/portfolio",
+    githubUrl: "https://github.com/kacperkg/portfolio",
   },
   {
     id: 2,
