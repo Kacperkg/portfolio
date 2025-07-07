@@ -12,7 +12,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   githubUrl,
 }) => {
   return (
-    <div className="group rounded-sm bg-[#111111] transition-all duration-300 hover:scale-101">
+    <div className="group rounded-sm bg-[#111111]">
       <div className="overflow-hidden">
         <Image
           src={imageUrl}

@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import ProjectCard from "./project-card";
 import { projectsData } from "~/constant/data/projects";
+import { motion } from "framer-motion";
 
 const ProjectGrid = () => {
   return (
@@ -10,28 +13,17 @@ const ProjectGrid = () => {
           <h3 className="mb-4 text-2xl font-medium">No projects yet</h3>
           <p className="text-white/70">Check back soon for updates!</p>
         </div>
-      ) : projectsData.length <= 2 ? (
+      ) : (
         <div className="grid min-h-[50vh] grid-cols-1 gap-8 md:grid-cols-2">
           {projectsData.map((project, index) => (
-            <div
+            <motion.div
               key={project.id}
-              className="animate-fade-up"
-              style={{ animationDelay: `${index * 150}ms` }}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <ProjectCard {...project} />
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projectsData.map((project, index) => (
-            <div
-              key={project.id}
-              className="animate-fade-up"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              <ProjectCard {...project} />
-            </div>
+            </motion.div>
           ))}
         </div>
       )}
