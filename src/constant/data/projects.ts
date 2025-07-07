@@ -1,5 +1,6 @@
 import type { Project } from "~/constant/interfaces";
 import hivePreview from "~/assets/hive-preview.png";
+import carvaultPreview from "~/assets/carvault-preview.jpg";
 import portfolioPreview from "~/assets/portfolio-preview.png";
 
 export const projectsData: Project[] = [
@@ -21,19 +22,23 @@ export const projectsData: Project[] = [
   },
   {
     id: 2,
-    title: "Hive - Workout Planner App",
+    title: "CarVault - Car Tracking Website",
     description:
-      "A modern, interactive workout planner for fitness enthusiasts.",
-    imageUrl: hivePreview.src,
+      "A modern, interactive car tracking website for car enthusiasts.",
+    imageUrl: carvaultPreview.src,
     technologies: [
-      "React Native",
+      "React",
       "TypeScript",
-      "Expo",
-      "Convex",
+      "Tailwind CSS",
+      "Next.js",
+      "Shadcn/UI",
+      "tRPC",
+      "Supabase",
       "Clerk",
-      "Reanimated",
-      "Magic.link",
+      "Vercel",
     ],
     construction: true,
+    demoUrl: "https://carvault.kacpergajdarski.com",
+    githubUrl: "https://github.com/Kacperkg/cargarage",
   },
 ];
