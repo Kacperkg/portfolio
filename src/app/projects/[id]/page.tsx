@@ -2,6 +2,8 @@ import Link from "next/link";
 import BackButton from "~/components/back-button";
 import { projectsData } from "~/constant/data/projects";
 import Image from "next/image";
+import { div } from "framer-motion/client";
+import { Card } from "~/components/ui/card";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -81,60 +83,112 @@ export default async function ProjectDetail({ params }: Props) {
 
       {/* Content Section */}
       <div className="container mx-auto px-8 py-16">
-        <div className="mx-auto max-w-4xl">
-          {/* Description */}
-          <div className="mb-8 rounded-lg border-2 border-white bg-black">
-            <div className="p-8">
-              <h2 className="mb-4 text-2xl font-bold text-white">
-                About This Project
-              </h2>
-              <p className="text-lg leading-relaxed text-white">
-                {project.description}
-              </p>
+        <div className="mx-auto flex max-w-4xl flex-col gap-8">
+          {/* Purpose */}
+          <section className="flex flex-col gap-4">
+            <h2 className="font-display text-3xl font-semibold text-white">
+              About This Project
+            </h2>
+            {project.purpose && (
+              <Card className="bg-gradient-secondary border-border/50 p-8">
+                <h3 className="mb-4 text-xl font-semibold text-white">
+                  Purpose & Vision
+                </h3>
+                <p className="mt-2 text-white/70">{project.purpose.desc}</p>
+              </Card>
+            )}
+
+            {/* Learning Goals */}
+
+            {project.learningGoal && (
+              <Card className="bg-gradient-secondary border-border/50 p-8">
+                <h3 className="mb-4 text-xl font-semibold text-white">
+                  Learning Goals
+                </h3>
+                <p className="mt-2 text-white/70">
+                  {project.learningGoal.desc}
+                </p>
+              </Card>
+            )}
+          </section>
+
+          {/* Tech Stack */}
+          <section className="mt-8 space-y-8">
+            <h2 className="font-display text-3xl font-semibold text-white">
+              Technology Stack
+            </h2>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              {project.techStack?.map((tech, index) => (
+                <Card
+                  key={index}
+                  className="bg-gradient-secondary border-border/50 group p-6"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-lg bg-slate-200 p-3 text-slate-800">
+                      <tech.icon />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="font-semibold text-white">{tech.title}</h3>
+                      <p className="text-sm leading-relaxed text-white/80">
+                        {tech.description}
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
             </div>
-          </div>
+          </section>
+
+          {/* Technical Description */}
+          {project.technicalDesc && (
+            <section className="space-y-6 pt-4">
+              <h2 className="font-display text-3xl font-semibold text-white">
+                Technical Decisions
+              </h2>
+              <Card className="bg-gradient-secondary border-border/50 p-8">
+                <h3 className="text-xl font-semibold text-white">
+                  {project.technicalDesc.backEndArch.title}
+                </h3>
+                <p className="mt-2 text-white/70">
+                  {project.technicalDesc.backEndArch.desc}
+                </p>
+              </Card>
+              <Card className="bg-gradient-secondary border-border/50 p-8">
+                <h3 className="text-xl font-semibold text-white">
+                  {project.technicalDesc.devPhys.title}
+                </h3>
+                <p className="mt-2 text-white/70">
+                  {project.technicalDesc.devPhys.desc}
+                </p>
+              </Card>
+            </section>
+          )}
 
           {/* Action Buttons */}
-          {!project.construction && (
-            <div className="flex flex-wrap justify-center gap-4">
-              {project.demoUrl && (
-                <a
-                  href={project.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-md border-2 border-white bg-white px-8 py-3 text-lg text-black transition-colors hover:bg-gray-200"
-                >
-                  View Live Demo
-                </a>
-              )}
+          <div className="flex flex-wrap justify-center gap-4">
+            {project.demoUrl && (
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-md border-2 border-white bg-white px-8 py-3 text-lg text-black transition-colors hover:bg-gray-200"
+              >
+                View Live Demo
+              </a>
+            )}
 
-              {project.githubUrl && (
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-md border-2 border-white px-8 py-3 text-lg text-white transition-colors hover:bg-white hover:text-black"
-                >
-                  View Code
-                </a>
-              )}
-            </div>
-          )}
-
-          {/* Construction Message */}
-          {project.construction && (
-            <div className="rounded-lg border-2 border-black bg-yellow-400">
-              <div className="p-8 text-center">
-                <h3 className="mb-4 text-2xl font-bold text-black">
-                  Coming Soon
-                </h3>
-                <p className="text-lg text-black">
-                  This project is currently under active development. Check back
-                  later for live demos and source code access!
-                </p>
-              </div>
-            </div>
-          )}
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-md border-2 border-white px-8 py-3 text-lg text-white transition-colors hover:bg-white hover:text-black"
+              >
+                View Code
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </div>
