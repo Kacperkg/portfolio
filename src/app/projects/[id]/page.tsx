@@ -2,7 +2,6 @@ import Link from "next/link";
 import BackButton from "~/components/back-button";
 import { projectsData } from "~/constant/data/projects";
 import Image from "next/image";
-import { div } from "framer-motion/client";
 import { Card } from "~/components/ui/card";
 
 interface Props {
