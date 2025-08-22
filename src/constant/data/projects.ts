@@ -1,7 +1,19 @@
 import type { Project } from "~/constant/interfaces";
 import carvaultPreview from "~/assets/carvault-preview.jpg";
 import portfolioPreview from "~/assets/portfolio-preview.png";
-import { Car, Code, Database, Shield, Wrench, Zap } from "lucide-react";
+import {
+  Car,
+  Cloud,
+  Code,
+  Database,
+  FileCode,
+  Layers,
+  Paintbrush,
+  Shield,
+  Sparkles,
+  Wrench,
+  Zap,
+} from "lucide-react";
 
 export const projectsData: Project[] = [
   {
@@ -19,6 +31,48 @@ export const projectsData: Project[] = [
     ],
     demoUrl: "https://kacpergajdarski.com",
     githubUrl: "https://github.com/kacperkg/portfolio",
+    purpose: {
+      title: "Purpose",
+      desc: "The purpose of this portfolio website is to showcase my skills, projects, and experience as a developer in a clean, modern, and easily navigable format. It serves as a central hub for potential employers, collaborators, and clients to learn more about my work and technical abilities.",
+    },
+    techStack: [
+      {
+        icon: Code,
+        title: "React",
+        description:
+          "Component-based UI library for building interactive user interfaces",
+      },
+      {
+        icon: FileCode,
+        title: "TypeScript",
+        description:
+          "Strongly typed JavaScript for safer and more maintainable code",
+      },
+      {
+        icon: Paintbrush,
+        title: "Tailwind CSS",
+        description:
+          "Utility-first CSS framework for rapid and responsive styling",
+      },
+      {
+        icon: Layers,
+        title: "Next.js",
+        description:
+          "Full-stack React framework with server-side rendering and static generation",
+      },
+      {
+        icon: Sparkles,
+        title: "Framer Motion",
+        description:
+          "Powerful animation library for smooth and interactive motion design",
+      },
+      {
+        icon: Cloud,
+        title: "Vercel",
+        description:
+          "Optimized deployment platform for Next.js with global edge network",
+      },
+    ],
   },
   {
     id: 2,
